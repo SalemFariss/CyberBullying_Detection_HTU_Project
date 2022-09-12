@@ -15,4 +15,4 @@ data = data['full_text']
 
 #send requests
 for key, value in data.items():
-    x = requests.get(url, params={"data": data[key], 'id':key})
+    x = requests.post(url, params={"data": data[key], 'id':key})
