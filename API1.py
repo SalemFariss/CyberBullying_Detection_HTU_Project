@@ -28,7 +28,7 @@ The API will connect to a sqlite3 database to create table (CyberBullying) and i
 app = Flask(__name__)
 APP_ROUTE = os.path.dirname(os.path.abspath(__file__))
 
-@app.route("/get_data", methods= ['GET'])
+@app.route("/get_data", methods= ['GET', 'POST'])
 def get_data():
     data = request.args.get("data")
     id = request.args.get("id")
